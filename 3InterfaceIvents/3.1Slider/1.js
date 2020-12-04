@@ -9,7 +9,7 @@ thumb.onmousedown = function(event) {
 
   function onMouseMove(event) {
     let slideMove = event.clientX - shiftX - slider.getBoundingClientRect().left;
-    if (0 < slideMove && slideMove < slider.offsetWidth - thumb.offsetWidth) {
+    if (slideMove > 0 && slideMove < slider.offsetWidth - thumb.offsetWidth) {
       thumb.style.left = slideMove + 'px'; 
     }
   }
